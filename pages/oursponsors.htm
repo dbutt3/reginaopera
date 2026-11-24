@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regina Opera Thanks Our Sponsors &amp; Donors | Regina Opera Company</title>
+
+  <!-- Montserrat Font (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --regina-navy: #14213d;
+      --regina-red: #9b2226;
+      --regina-gold: #c9a227;
+      --regina-light: #f8f9fa;
+      --regina-border: #e2e8f0;
+      --text-dark: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    a {
+      color: var(--regina-navy);
+    }
+
+    a:hover {
+      color: var(--regina-red);
+    }
+
+    /* --- CONTAINER STACK --- */
+    .regina-container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .page-banner {
+      background: var(--regina-navy);
+      color: #ffffff;
+      padding: 36px 28px;
+      border-radius: 4px;
+      border-bottom: 4px solid var(--regina-gold);
+      text-align: center;
+    }
+
+    .page-banner h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 12px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .page-banner p {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin: 0 0 18px;
+    }
+
+    .banner-jump-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .banner-jump-links a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .banner-jump-links a:hover {
+      background: var(--regina-gold);
+      border-color: var(--regina-gold);
+      color: var(--regina-navy);
+    }
+
+    .logo-strip-card {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      padding: 20px;
+      border-radius: 4px;
+      text-align: center;
+    }
+
+    .logo-strip-card img {
+      max-width: 100%;
+      height: auto;
+      display: inline-block;
+    }
+
+    .regina-card {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      padding: 32px;
+      border-radius: 4px;
+    }
+
+    .regina-card.gold-top {
+      border-top: 4px solid var(--regina-gold);
+      background: var(--regina-light);
+    }
+
+    .regina-card.red-top {
+      border-top: 4px solid var(--regina-red);
+    }
+
+    .regina-card.navy-top {
+      border-top: 4px solid var(--regina-navy);
+    }
+
+    .regina-card.funding-box {
+      background: var(--regina-light);
+      border: 2px solid var(--regina-navy);
+      font-size: 0.92rem;
+    }
+
+    .section-title {
+      font-size: 1.4rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--regina-navy);
+      margin: 0 0 18px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--regina-gold);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+
+    .tier-badge {
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: var(--regina-navy);
+      color: var(--regina-gold);
+      padding: 4px 10px;
+      border-radius: 3px;
+      letter-spacing: 0.05em;
+    }
+
+    /* Donor Lists */
+    .donor-list-single {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      font-weight: 600;
+    }
+
+    .donor-list-columns {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      columns: 2;
+      column-gap: 40px;
+    }
+
+    .donor-list-columns li {
+      break-inside: avoid;
+      padding: 4px 0;
+      font-weight: 500;
+    }
+
+    .donor-list-single li {
+      padding: 4px 0 4px 14px;
+      border-left: 3px solid var(--regina-gold);
+    }
+
+    .donate-cta-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      background: var(--regina-navy);
+      color: #ffffff;
+      padding: 24px 28px;
+      border-radius: 4px;
+    }
+
+    .donate-cta-bar p {
+      margin: 0;
+      font-weight: 700;
+      font-size: 1.05rem;
+    }
+
+    .btn-solid-red {
+      display: inline-block;
+      padding: 10px 22px;
+      background: var(--regina-red);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s ease;
+    }
+
+    .btn-solid-red:hover {
+      background: #7d1b1e;
+      color: #ffffff;
+    }
+
+    @media (max-width: 700px) {
+      .donor-list-columns {
+        columns: 1;
+      }
+      .page-banner h1 {
+        font-size: 1.55rem;
+      }
+      .regina-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="regina-container">
+
+    <!-- PAGE BANNER & JUMP LINKS -->
+    <div class="page-banner">
+      <h1>REGINA OPERA THANKS</h1>
+      <p>Our performances and community programs are made possible through the generosity of our public, foundation, corporate, and individual supporters.</p>
+      <nav class="banner-jump-links" aria-label="Donor Categories">
+        <a href="#institutional">Public &amp; Foundations</a>
+        <a href="#archangels">Archangels</a>
+        <a href="#angels">Angels</a>
+        <a href="#patrons">Patrons</a>
+        <a href="#inkind">In-Kind</a>
+        <a href="#guild">Guild Members</a>
+      </nav>
+    </div>
+
+    <!-- DONOR LOGO STRIP -->
+    <div class="logo-strip-card">
+      <img alt="Donor logos" src="../images/2025-09%20Donor%20Logo%20Strip.jpg" width="650" height="57">
+    </div>
+
+    <!-- 1. PUBLIC, FOUNDATION, & CORPORATE SUPPORT -->
+    <section id="institutional" class="regina-card navy-top">
+      <h2 class="section-title">PUBLIC, FOUNDATION, &amp; CORPORATE SUPPORT</h2>
+      <ul class="donor-list-single">
+        <li>New York State Council on the Arts with the support of the Office of the Governor and the New York State Legislature</li>
+        <li>NYC Department of Cultural Affairs in partnership with the City Council</li>
+        <li>NYC Council Member Alexa Avilés</li>
+        <li>NYC Council Member Kayla Santosuosso</li>
+        <li>The Achelis and Bodman Foundation</li>
+        <li>Donald C. Brace Foundation</li>
+        <li>The Harding Educational and Charitable Foundation</li>
+        <li>Investors Foundation</li>
+        <li>Ezra Jack Keats Foundation</li>
+        <li>New York City Tourism Foundation</li>
+      </ul>
+    </section>
+
+    <!-- 2. ARCHANGELS ($1,000+) -->
+    <section id="archangels" class="regina-card gold-top">
+      <h2 class="section-title">
+        <span>ARCHANGELS</span>
+        <span class="tier-badge">$1,000+</span>
+      </h2>
+      <ul class="donor-list-single">
+        <li>Richard Agster</li>
+        <li>Joe Delfausse</li>
+        <li>Sidney &amp; Ann Feldman</li>
+        <li>Gary Giardina</li>
+        <li>Peter Hakjoon Kim</li>
+        <li>Charles Monto</li>
+        <li>Robert Ohlerking, <i>in memory of Christopher LiGreci</i></li>
+        <li>Saul D. Raw</li>
+        <li>Sung Shin</li>
+        <li>Alex Kates Shulman &amp; Polly Shulman, <i>in memory of Theodore (Ted) Shulman</i></li>
+        <li>Dino Veronese</li>
+      </ul>
+    </section>
+
+    <!-- 3. ANGELS ($100+) -->
+    <section id="angels" class="regina-card red-top">
+      <h2 class="section-title">
+        <span>ANGELS</span>
+        <span class="tier-badge">$100+</span>
+      </h2>
+      <ul class="donor-list-columns">
+        <li>Rita Antomez</li>
+        <li>Louis Barrella</li>
+        <li>Richard &amp; Sera Barry</li>
+        <li>Judith Berman</li>
+        <li>Josephine Brillante &amp; Marilyn Levy</li>
+        <li>Jadie Chang-Carbone</li>
+        <li>Richard Cohen &amp; Sue Carlson</li>
+        <li>Donna &amp; Bill Costa</li>
+        <li>Wanda Fleck</li>
+        <li>Dr. Howard Fox</li>
+        <li>Trudy Geisner &amp; Willy Lignau</li>
+        <li>Patricia Gelpi</li>
+        <li>Stephen Geraci</li>
+        <li>Frank Guerrasio</li>
+        <li>Rita Harding</li>
+        <li>Laura Haight, <i>in memory of Theodore Shulman</i></li>
+        <li>Lois Honig</li>
+        <li>Joan Kligman &amp; Linda Lucardi</li>
+        <li>Molly Kuribayashi</li>
+        <li>Joel LaForce &amp; Richard Faraino</li>
+        <li>Charles &amp; Nancy Liebov</li>
+        <li>Edward Mafoud</li>
+        <li>Cary Monica</li>
+        <li>Susan O’Brien</li>
+        <li>John Papandrea</li>
+        <li>Peter &amp; Theresa Polito</li>
+        <li>Dean Rasinya</li>
+        <li>Joe Romano</li>
+        <li>Gerard Schoenacher</li>
+        <li>Santo Trapani</li>
+        <li>Barry Weiner</li>
+        <li>Michael Weire</li>
+        <li>Anthony Zeppetella</li>
+      </ul>
+    </section>
+
+    <!-- 4. PATRONS ($25+) -->
+    <section id="patrons" class="regina-card navy-top">
+      <h2 class="section-title">
+        <span>PATRONS</span>
+        <span class="tier-badge">$25+</span>
+      </h2>
+      <ul class="donor-list-columns">
+        <li>Jack &amp; Enid Benezra</li>
+        <li>Henry Brenner</li>
+        <li>Adelina Mingo Chase, <i>in memory of Lena Dimitri Goren</i></li>
+        <li>Anthony Furio</li>
+        <li>John Galazin</li>
+        <li>Olga Gaston</li>
+        <li>Joan Grassano</li>
+        <li>Dr. Michael Herskowitz</li>
+        <li>Wayne Huang</li>
+        <li>Joyce A. Huff</li>
+        <li>Stuart Malkin</li>
+        <li>Victoria McFadyen</li>
+        <li>Marsha &amp; Barry Menkes</li>
+        <li>Jerry Neuhoff</li>
+        <li>Susan and Chris O’Connor</li>
+        <li>Wayne N. Olsen</li>
+        <li>Linda Orlando</li>
+        <li>Kathy Palestino</li>
+        <li>Judith Panzer</li>
+        <li>JoAnn Radioli</li>
+        <li>Joseph Romano</li>
+        <li>Accursia Sichenze</li>
+        <li>Jeremy Woodoff &amp; Aleya Lehmann</li>
+      </ul>
+    </section>
+
+    <!-- 5. IN-KIND DONATIONS -->
+    <section id="inkind" class="regina-card">
+      <h2 class="section-title">IN-KIND DONATIONS</h2>
+      <ul class="donor-list-columns">
+        <li>Casa Vieja Restaurant</li>
+        <li>D’Amico Foods</li>
+        <li>Generoso’s Bakery &amp; Sandwich Shop</li>
+        <li>Greenhouse Café</li>
+        <li>The Ink Shop</li>
+        <li>Materials for the Arts / NYC Department of Sanitation</li>
+        <li>Meze Restaurant</li>
+        <li>Peter Orlandi, CPA</li>
+        <li>George Schowerer</li>
+      </ul>
+    </section>
+
+    <!-- 6. REGINA OPERA GUILD MEMBERS -->
+    <section id="guild" class="regina-card gold-top">
+      <h2 class="section-title">REGINA OPERA GUILD MEMBERS</h2>
+      <ul class="donor-list-columns">
+        <li>Rita Antomez</li>
+        <li>Richard &amp; Sera Barry</li>
+        <li>Jack &amp; Enid Benezra</li>
+        <li>Judith Berman</li>
+        <li>Paul &amp; Marie Cohen</li>
+        <li>Thomas Dean &amp; Yun-ah Hong</li>
+        <li>Richard Faraino &amp; Joel La Force</li>
+        <li>Sidney &amp; Ann Feldman</li>
+        <li>Dr. &amp; Mrs. Howard Fox</li>
+        <li>John Galazin &amp; Clara DiGiorgio</li>
+        <li>Ruth Gastel</li>
+        <li>Trudy Geisner</li>
+        <li>Frank Guerrasio</li>
+        <li>Lois Honig</li>
+        <li>Wayne Huang</li>
+        <li>Leo &amp; Olga Kearney</li>
+        <li>Joan Kligman &amp; Linda Lucardi</li>
+        <li>Marilyn Levy &amp; Josephine Brillante</li>
+        <li>Charles &amp; Nancy Liebov</li>
+        <li>Edward Mafoud</li>
+        <li>Stuart Malkin</li>
+        <li>Victoria McFadyen</li>
+        <li>Marsha Menkes</li>
+        <li>Cary Monica</li>
+        <li>Susan &amp; Chris O’Connor</li>
+        <li>Wayne &amp; Phyllis Olsen</li>
+        <li>Linda Orlando</li>
+        <li>John Papandrea</li>
+        <li>Constance Piorkowski</li>
+        <li>Theresa &amp; Peter Polito</li>
+        <li>Deborah Pope</li>
+        <li>Lorraine Prisco</li>
+        <li>Jo Ann Radioli</li>
+        <li>Dean &amp; Helen Rasinya</li>
+        <li>Mr. &amp; Mrs. Joseph Romano</li>
+        <li>Patricia Rosenberg</li>
+        <li>Santo Trapani</li>
+        <li>John Welch</li>
+        <li>Jeremy Woodoff &amp; Aleya Lehmann</li>
+        <li>Tony &amp; Barbara Zeppetella</li>
+      </ul>
+    </section>
+
+    <!-- SUPPORT CTA BAR -->
+    <div class="donate-cta-bar">
+      <p>Want to see your name on this list and help keep opera affordable in Brooklyn?</p>
+      <a href="../give.htm" class="btn-solid-red">Make a Donation</a>
+    </div>
+
+
+  </main>
+
+</body>
+</html>
