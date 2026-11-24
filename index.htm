@@ -386,58 +386,85 @@
       width: auto;
     }
 
-    /* --- FOOTER --- */
+   /* --- 3-COLUMN GENESIS-STYLE FOOTER --- */
     .regina-footer {
       background: var(--regina-light);
-      border-top: 1px solid var(--regina-border);
-      padding: 40px 24px;
-      margin-top: 40px;
+      border-top: 3px solid var(--regina-navy);
+      padding: 48px 24px 32px;
+      margin-top: 48px;
       font-size: 0.9rem;
     }
 
-    .regina-footer-inner {
-      max-width: 1000px;
+    .footer-widgets-grid {
+      max-width: 1200px;
       margin: 0 auto;
-    }
-
-    .footer-section {
-      margin-bottom: 28px;
-      padding-bottom: 24px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 40px;
+      text-align: center;
+      padding-bottom: 36px;
       border-bottom: 1px solid var(--regina-border);
     }
 
-    .footer-section:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
+    .footer-widget-col h3 {
+      font-size: 1.05rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      color: var(--regina-navy);
+      margin: 0 0 12px;
     }
 
-    .center {
-      text-align: center;
+    .footer-divider {
+      width: 65%;
+      height: 1px;
+      background: var(--regina-gold);
+      margin: 12px auto;
+    }
+
+    .footer-divider.short {
+      width: 45%;
+    }
+
+    .footer-subscribe-btn {
+      display: inline-block;
+      background: var(--regina-red);
+      color: #ffffff;
+      border: none;
+      padding: 10px 24px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      border-radius: 3px;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+
+    .footer-subscribe-btn:hover {
+      background: #7d1b1e;
+      color: #ffffff;
+    }
+
+    .footer-bottom-meta {
+      max-width: 1000px;
+      margin: 28px auto 0;
+      font-size: 0.85rem;
+    }
+
+    .footer-accessibility {
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid var(--regina-border);
+      text-align: left;
     }
 
     @media (max-width: 850px) {
-      .gg-header-inner,
-      .regina-main-grid,
-      .extra-videos-grid {
+      .footer-widgets-grid {
         grid-template-columns: 1fr;
-        flex-direction: column;
-        align-items: center;
-      }
-
-      .gg-nav-stack {
-        align-items: center;
-      }
-
-      .gg-primary-nav {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 16px;
-      }
-
-      .gg-dropdown {
-        right: auto;
-        left: 0;
+        gap: 32px;
       }
     }
   </style>
@@ -674,36 +701,86 @@
     </div>
   </main>
 
-  <!-- FOOTER -->
+<!-- FOOTER -->
   <footer class="regina-footer">
-    <div class="regina-footer-inner">
-      <div class="footer-section center">
-        <p style="font-size: 0.85rem;">
-          Regina Opera programs are supported, in part, by public funds from the New York City Department of Cultural Affairs, in partnership with
-          the City Council. Major support is provided by New York City Council Members Alexa Avilés and Justin Brannan. Regina Opera Company’s programs are
-          made possible by the New York State Council on the Arts with the support of the Office of the Governor and the New York State Legislature. Regina Opera thanks all
-          its <a href="thankyou.htm">donors</a>.
+    <div class="footer-widgets-grid">
+
+      <!-- Column 1: Where to Find Us -->
+      <div class="footer-widget-col">
+        <h3>Where to Find Us</h3>
+        <div class="footer-divider"></div>
+        <p style="margin: 0;">
+          <a href="tel:718-259-2772"><b>718-259-2772</b></a><br>
+          <a href="mailto:info@reginaopera.org">info@reginaopera.org</a>
+        </p>
+        <div class="footer-divider short"></div>
+        <p style="margin: 0;">
+          <b>Performance Venue:</b><br>
+          Our Lady of Perpetual Help<br>
+          Catholic Academy of Brooklyn<br>
+          5902 6th Avenue, Brooklyn, NY 11220<br>
+          <a href="olph.htm">Directions &amp; Subway Info</a>
+          <div class="footer-divider short"></div>
+        <p style="margin: 0;">
+          <b>Mailing Address:</b><br>
+          Regina Opera Company<br>
+          P.O. Box 150253<br>
+          Brooklyn, New York 11215<br>
         </p>
       </div>
 
-      <div class="footer-section">
-        <p class="center"><b>WEB ACCESSIBILITY POLICY</b></p>
+      <!-- Column 2: Supported in Part by -->
+      <div class="footer-widget-col">
+        <h3>Supported in Part by</h3>
+        <div class="footer-divider"></div>
+        <p style="font-size: 0.83rem; margin: 0 0 12px;">
+          Regina Opera programs are supported, in part, by public funds from the New York City Department of Cultural Affairs, in partnership with the City Council. Major support is provided by New York City Council Members Alexa Avilés and Justin Brannan.
+        </p>
+        <div class="footer-divider short"></div>
+        <p style="font-size: 0.83rem; margin: 0 0 12px;">
+          Regina Opera Company’s programs are made possible by the New York State Council on the Arts with the support of the Office of the Governor and the New York State Legislature.
+        </p>
+        <p style="margin: 0;">
+          And donations from people like you.<br>
+          <a href="give.htm"><b>Donate today</b></a> &bull; <a href="thankyou.htm">Our Donors</a>
+        </p>
+      </div>
+
+      <!-- Column 3: Sign Up for Our Newsletter -->
+      <div class="footer-widget-col">
+        <h3>Sign Up for Our Newsletter</h3>
+        <div class="footer-divider"></div>
+        <p style="margin: 0 0 18px;">
+          Sign up to get season announcements, concert dates, and news delivered to your inbox.
+        </p>
+        <!-- Replace action URL below with Regina Opera's mailing list link if you use Constant Contact/Mailchimp -->
+        <form action="contact.htm" method="get">
+          <button type="submit" class="footer-subscribe-btn">Subscribe</button>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- Bottom Accessibility Policy & Copyright -->
+    <div class="footer-bottom-meta">
+      <div class="footer-accessibility">
+        <p class="center" style="margin-top: 0;"><b>WEB ACCESSIBILITY POLICY</b></p>
         <p>
           At Regina Opera, we are committed to web accessibility. It is our policy to ensure that all people,
           including those with disabilities, have full and equal access to our digital offerings. To that end, we have undergone training on web accessibility and have implemented changes to our website to make it as accessible
           as we can. We will continue to make good-faith efforts to employ web accessibility best practices and to comply with federal, state, and local laws.
           If you know of a way in which we can improve the accessibility of our website, please <a href="contact.htm">contact us</a>.
         </p>
-        <p>
+        <p style="margin-bottom: 0;">
           Please also see <a href="accessibility.htm">this page</a> for information about physical accessibility at our main performance venue, Our Lady of Perpetual Help Catholic Academy of Brooklyn.
         </p>
       </div>
 
-      <div class="footer-section center" style="font-size: 0.85rem;">
-        <p>
+      <div class="center">
+        <p style="margin: 0;">
           On the web since March 17, 1997<br>
           Last revised: November 11, 2026<br>
-          All content © 1997–2026 Regina Opera Company (except where otherwise noted)
+          All content &copy; 1997–2026 Regina Opera Company (except where otherwise noted)
         </p>
       </div>
     </div>
