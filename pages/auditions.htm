@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Auditions &amp; Opportunities | Regina Opera Company</title>
+
+  <!-- Montserrat Font (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --regina-navy: #14213d;
+      --regina-red: #9b2226;
+      --regina-gold: #c9a227;
+      --regina-light: #f8f9fa;
+      --regina-border: #e2e8f0;
+      --text-dark: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    a {
+      color: var(--regina-navy);
+    }
+
+    a:hover {
+      color: var(--regina-red);
+    }
+
+    /* --- CONTAINER STACK --- */
+    .regina-container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .page-banner {
+      background: var(--regina-navy);
+      color: #ffffff;
+      padding: 36px 28px;
+      border-radius: 4px;
+      border-bottom: 4px solid var(--regina-gold);
+      text-align: center;
+    }
+
+    .page-banner h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 10px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .page-banner p {
+      font-size: 1rem;
+      color: #e2e8f0;
+      margin: 0 0 18px;
+    }
+
+    .banner-jump-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .banner-jump-links a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 12px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .banner-jump-links a:hover {
+      background: var(--regina-gold);
+      border-color: var(--regina-gold);
+      color: var(--regina-navy);
+    }
+
+    .regina-card {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      padding: 32px;
+      border-radius: 4px;
+    }
+
+    .regina-card.featured-red {
+      border-top: 4px solid var(--regina-red);
+      background: var(--regina-light);
+    }
+
+    .regina-card.navy-top {
+      border-top: 4px solid var(--regina-navy);
+    }
+
+    .regina-card.gold-top {
+      border-top: 4px solid var(--regina-gold);
+    }
+
+    .section-title {
+      font-size: 1.45rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--regina-navy);
+      margin: 0 0 16px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--regina-gold);
+    }
+
+    .callout-box {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      border-left: 4px solid var(--regina-gold);
+      padding: 16px 20px;
+      margin: 18px 0;
+      border-radius: 3px;
+    }
+
+    .callout-box.alert {
+      border-left-color: var(--regina-red);
+      background: #fffafa;
+    }
+
+    .role-block {
+      border-left: 3px solid var(--regina-gold);
+      padding-left: 18px;
+      margin-bottom: 24px;
+    }
+
+    .role-block:last-child {
+      margin-bottom: 0;
+    }
+
+    .role-block h3 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--regina-navy);
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+    }
+
+    .role-block p {
+      margin: 0 0 10px;
+    }
+
+    .role-block p:last-child {
+      margin-bottom: 0;
+    }
+
+    .staff-list {
+      margin: 12px 0 16px;
+      padding-left: 22px;
+      font-weight: 600;
+    }
+
+    .staff-list li {
+      margin-bottom: 6px;
+    }
+
+    .btn-solid-red {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 20px;
+      background: var(--regina-red);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: background 0.2s ease;
+    }
+
+    .btn-solid-red:hover {
+      background: #7d1b1e;
+      color: #ffffff;
+    }
+
+    @media (max-width: 650px) {
+      .page-banner h1 {
+        font-size: 1.55rem;
+      }
+      .regina-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="regina-container">
+
+    <!-- PAGE BANNER & JUMP LINKS -->
+    <div class="page-banner">
+      <h1>AUDITIONS</h1>
+      <p>Join Regina Opera Company onstage, in the orchestra pit, or backstage in Brooklyn.</p>
+      <nav class="banner-jump-links" aria-label="Audition Categories">
+        <a href="#general">General Info</a>
+        <a href="#Singers">Singers &amp; Dancers</a>
+        <a href="#directors">Directors &amp; Conductors</a>
+        <a href="#musicians">Musicians</a>
+        <a href="#staff">Technical Staff &amp; Volunteers</a>
+      </nav>
+    </div>
+
+    <!-- 1. GENERAL AUDITION INFORMATION -->
+    <section id="general" class="regina-card featured-red">
+      <h2 class="section-title">GENERAL AUDITION INFORMATION</h2>
+
+      <div class="callout-box alert">
+        <p style="margin: 0 0 6px; font-weight: 800; color: var(--regina-red); font-size: 1.05rem;">
+          Auditions are by invitation only.
+        </p>
+        <p style="margin: 0; font-weight: 600;">
+          We are a No Pay–No Fee showcase.
+        </p>
+      </div>
+
+      <p style="font-weight: 600;">
+        To be considered for a role, please e-mail your <b>resume, headshot, and a recent recording</b> to producer Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a> with your <b>name and desired role</b> in the Subject line.
+      </p>
+
+      <p style="margin-bottom: 0; font-weight: 600;">
+        <a href="#Singers">Singers</a> must be available <b>Tuesday evenings and Saturday afternoons</b>.
+      </p>
+
+      <div style="margin-top: 14px;">
+        <a class="btn-solid-red" href="mailto:reginaopera@yahoo.com?subject=Audition%20Submission%20-%20%5BYour%20Name%20%2F%20Role%5D">Email Audition Materials</a>
+      </div>
+    </section>
+
+    <!-- 2. SINGERS (PRINCIPALS, CHORUS, DANCERS) -->
+    <section id="Singers" class="regina-card navy-top">
+      <h2 class="section-title">SINGERS</h2>
+
+      <div class="role-block">
+        <h3>Principals</h3>
+        <p>
+          Regina Opera auditions, which are held as needed throughout the season, are <b>by invitation only</b>. Send us your resume, headshot, and a recent recording, and we’ll contact you if a suitable role is available. There is no audition fee. We provide the accompanist, although you may of course bring your own if you prefer. If you are chosen for a role, you <b>MUST be available for rehearsals Tuesday evenings and Saturday afternoons</b>, as well as for all performance dates.
+        </p>
+        <p>
+          <b>E-mail your resume and a recent recording to Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a> with your name and desired role or voice type in the Subject line.</b>
+        </p>
+        <div class="callout-box" style="margin-bottom: 0;">
+          <p style="margin: 0 0 6px;">
+            Please make sure your resume indicates <b>where you actually reside</b> (city and state or country), and includes a <b>contact phone number and e-mail address</b>.
+          </p>
+          <p style="margin: 0;">
+            Note to singers who live outside New York City: <b>We cannot provide room and board</b>.
+          </p>
+        </div>
+      </div>
+
+      <div class="role-block">
+        <h3>Chorus</h3>
+        <p>
+          <b>E-mail Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a></b> to audition for our chorus. We are especially in need of <b>tenors and basses</b>. Choristers <b>must be able to read music</b> and be available to attend rehearsals on <b>Tuesday evenings and Saturday afternoons</b>, as well as extra rehearsals as needed.
+        </p>
+      </div>
+
+      <div class="role-block">
+        <h3>Dancers</h3>
+        <p>
+          We are often in need of dancers. Please send your resume to <b>Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a></b> if you would like to be considered for a future production.
+        </p>
+      </div>
+    </section>
+
+    <!-- 3. STAGE DIRECTORS AND CONDUCTORS -->
+    <section id="directors" class="regina-card gold-top">
+      <h2 class="section-title">STAGE DIRECTORS AND CONDUCTORS</h2>
+      <p style="margin: 0;">
+        Your resume is always welcome; we will contact you for an interview if a position opens. And let us know if you have something in production that you’d like us to see. We pay a nominal honorarium. E-mail your resume to <b>Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a></b>.
+      </p>
+    </section>
+
+    <!-- 4. MUSICIANS -->
+    <section id="musicians" class="regina-card navy-top">
+      <h2 class="section-title">MUSICIANS</h2>
+      <p style="margin: 0;">
+        <b>Piano accompanists</b> and <b>orchestral players</b> should e-mail <b>Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a></b>. Payment is per service.
+      </p>
+    </section>
+
+    <!-- 5. TECHNICAL AND OTHER STAFF -->
+    <section id="staff" class="regina-card gold-top">
+      <h2 class="section-title">TECHNICAL AND OTHER STAFF</h2>
+      <p style="margin-top: 0;">
+        The backbone of any opera company is backstage. We are always looking for technical staff of any experience level (except as noted) for the following positions:
+      </p>
+
+      <ul class="staff-list">
+        <li>Production Assistants</li>
+        <li>Carpenters/Painters</li>
+        <li>Makeup/Hair Assistants</li>
+      </ul>
+
+      <p>
+        A nominal honorarium may be paid depending on the position and our budget. E-mail <b>Fran Garber at <a href="mailto:reginaopera@yahoo.com">reginaopera@yahoo.com</a></b> to apply.
+      </p>
+
+      <div class="callout-box" style="margin-bottom: 0;">
+        <p style="margin: 0;">
+          We also need <b>volunteers</b> to handle the box office, concessions, ushering, and cleanup – no pay, but you get to see fine opera for free!
+        </p>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
