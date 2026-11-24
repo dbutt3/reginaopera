@@ -1,131 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Regina Opera’s 57th Season (2026–2027) | Regina Opera Company</title>
+
+  <!-- Montserrat Font (Google Fonts) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --regina-navy: #14213d;
+      --regina-red: #9b2226;
+      --regina-gold: #c9a227;
+      --regina-light: #f8f9fa;
+      --regina-border: #e2e8f0;
+      --text-dark: #1a1a1a;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      color: var(--text-dark);
+      margin: 0;
+      line-height: 1.6;
+      background-color: #ffffff;
+    }
+
+    a {
+      color: var(--regina-navy);
+    }
+
+    a:hover {
+      color: var(--regina-red);
+    }
+
+    /* --- CONTAINER STACK --- */
+    .regina-container {
+      max-width: 960px;
+      margin: 40px auto;
+      padding: 0 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 28px;
+    }
+
+    .season-page-banner {
+      background: var(--regina-navy);
+      color: #ffffff;
+      padding: 36px 28px;
+      border-radius: 4px;
+      border-bottom: 4px solid var(--regina-gold);
+      text-align: center;
+    }
+
+    .season-page-banner h1 {
+      font-size: 2rem;
+      font-weight: 800;
+      margin: 0 0 6px;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+    }
+
+    .season-page-banner .season-years {
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: var(--regina-gold);
+      margin: 0 0 14px;
+    }
+
+    .season-jump-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      font-size: 0.9rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .season-jump-links a {
+      color: #ffffff;
+      text-decoration: none;
+      padding: 6px 14px;
+      border: 1px solid rgba(255, 255, 255, 0.35);
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .season-jump-links a:hover {
+      background: var(--regina-gold);
+      border-color: var(--regina-gold);
+      color: var(--regina-navy);
+    }
+
+    .regina-card {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      padding: 32px;
+      border-radius: 4px;
+    }
+
+    .regina-card.featured-show {
+      border-top: 4px solid var(--regina-red);
+      background: var(--regina-light);
+    }
+
+    .regina-card.navy-accent {
+      border-top: 4px solid var(--regina-navy);
+    }
+
+    .regina-card.funding-box {
+      background: var(--regina-light);
+      border: 2px solid var(--regina-navy);
+      font-size: 0.92rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      color: var(--regina-navy);
+      margin: 0 0 12px;
+      padding-bottom: 10px;
+      border-bottom: 2px solid var(--regina-gold);
+    }
+
+    .tagline-banner {
+      font-weight: 700;
+      font-size: 0.96rem;
+      text-align: center;
+      color: var(--regina-navy);
+      background: #ffffff;
+      padding: 14px 18px;
+      border-left: 4px solid var(--regina-gold);
+      margin-bottom: 24px;
+      border-radius: 3px;
+    }
+
+    .show-title {
+      font-size: 1.75rem;
+      font-weight: 800;
+      margin: 0 0 8px;
+      letter-spacing: 0.03em;
+    }
+
+    .show-title a {
+      color: var(--regina-red);
+      text-decoration: none;
+    }
+
+    .show-title a:hover {
+      text-decoration: underline;
+    }
+
+    .sub-event-box {
+      background: #ffffff;
+      border: 1px solid var(--regina-border);
+      border-left: 4px solid var(--regina-gold);
+      padding: 16px 20px;
+      margin: 18px 0;
+      border-radius: 3px;
+    }
+
+    .review-item {
+      border-left: 3px solid var(--regina-gold);
+      padding-left: 16px;
+      margin-bottom: 22px;
+    }
+
+    .review-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .review-item h3 {
+      margin: 0 0 6px;
+      font-size: 1.15rem;
+      font-weight: 800;
+      color: var(--regina-navy);
+    }
+
+    .review-item p {
+      margin: 0 0 6px;
+    }
+
+    .btn-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 18px;
+    }
+
+    .btn-outline {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 2px solid var(--regina-navy);
+      color: var(--regina-navy);
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-outline:hover {
+      background: var(--regina-navy);
+      color: #ffffff;
+    }
+
+    .btn-solid-red {
+      display: inline-block;
+      padding: 8px 18px;
+      border: 2px solid var(--regina-red);
+      background: var(--regina-red);
+      color: #ffffff;
+      font-weight: 700;
+      font-size: 0.85rem;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 3px;
+      transition: all 0.2s ease;
+    }
+
+    .btn-solid-red:hover {
+      background: #7d1b1e;
+      border-color: #7d1b1e;
+      color: #ffffff;
+    }
+
+    .center {
+      text-align: center;
+    }
+
+    @media (max-width: 650px) {
+      .season-page-banner h1 {
+        font-size: 1.5rem;
+      }
+      .regina-card {
+        padding: 22px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <main class="regina-container">
+
+    <!-- PAGE TITLE & JUMP LINKS -->
+    <div class="season-page-banner">
+      <h1>REGINA OPERA’S 57th SEASON</h1>
+      <p class="season-years">2026–2027</p>
+      <nav class="season-jump-links" aria-label="Season Sections">
+        <a href="#Operas">Operas</a>
+        <a href="#Sunday">Sunday Concerts</a>
+        <a href="#Outreach">Free Performances</a>
+      </nav>
+    </div>
+
+    <!-- 1. OPERAS -->
+    <section id="Operas" class="regina-card featured-show">
+      <h2 class="section-title">OPERAS</h2>
+
+      <div class="tagline-banner">
+        All operas are performed in the original language with English supertitles.<br>
+        <a href="../info.htm">More information</a>
+      </div>
+
+      <h3 class="show-title"><a href="../butterfly.htm">MADAMA BUTTERFLY</a></h3>
+      <p style="margin: 0 0 12px; font-weight: 600;">
+        Conducted by Scott Jackson Wiley<br>
+        Directed by John Schenkel
+      </p>
+
+      <p style="font-size: 1.15rem; font-weight: 800; color: var(--regina-navy); margin: 0 0 12px;">
+        Nov. 7, 8, 14 &amp; 15, 2026, at 3 PM
+      </p>
+
+      <div class="sub-event-box">
+        <p style="margin: 0; font-weight: 700; color: var(--regina-red);">FREE open dress rehearsal with orchestra</p>
+        <p style="margin: 4px 0 0; font-weight: 600;">Nov. 5, 2026, at 7 PM</p>
+      </div>
+
+      <p style="margin: 0 0 6px;"><b>At OLPH, 5902 6th Ave., Brooklyn</b></p>
+      <p style="margin: 0 0 16px;">Tickets <a href="../tickets.htm">online</a> or at the door</p>
+
+      <div class="btn-group">
+        <a class="btn-solid-red" href="../tickets.htm">Buy Tickets</a>
+        <a class="btn-outline" href="../butterfly.htm">More Info</a>
+        <a class="btn-outline" href="../Butterfly%202026%20Program%20FINAL.pdf">Program PDF</a>
+      </div>
+    </section>
+
+    <!-- 2. SUNDAY AFTERNOON CONCERTS -->
+    <section id="Sunday" class="regina-card navy-accent">
+      <h2 class="section-title">SUNDAY AFTERNOON CONCERTS</h2>
+
+      <p style="font-weight: 600; margin-top: 0;">
+        All Sunday Concerts are performed at OLPH, 5902 6th Avenue, Brooklyn
+      </p>
+
+      <div id="FREE_NEW_PERFORMERS_CONCERT_" class="sub-event-box">
+        <h3 style="margin: 0 0 6px; font-size: 1.25rem; font-weight: 800; color: var(--regina-navy);">
+          FREE NEW PERFORMERS CONCERT
+        </h3>
+        <p style="margin: 0 0 10px; font-weight: 700; color: var(--regina-red);">
+          Oct. 18, 2026, at 3 PM
+        </p>
+        <p style="margin: 0 0 12px;">
+          Make Fall festive with a FREE 2-hour Sunday Concert of opera favorites and songs in several languages!
+        </p>
+        <p style="margin: 0 0 12px;">
+          <b>Featuring our NEW ARTISTS:</b><br>
+          Giovanna Yaqi Yang, soprano; Jihye Seo, soprano;<br>
+          Hana Yiu, Mezzo-soprano; Ian Harris, tenor;<br>
+          Michael Nim, tenor; and Anthony Larson, basso
+        </p>
+        <p style="margin: 0 0 14px;">
+          Returning on instrumentals are fan favorites Violetta Zabbi, piano, &amp; Richard Paratley, flute.
+        </p>
+        <a class="btn-outline" href="../OCTOBER%2018%202026%20program%20-%203%20pages.pdf">Program PDF</a>
+      </div>
+    </section>
+
+    <!-- 3. FREE PERFORMANCES -->
+    <section id="Outreach" class="regina-card navy-accent">
+      <h2 class="section-title">FREE PERFORMANCES</h2>
+
+      <p style="margin-top: 0;">
+        <b>Keep watching this space for performances you can enjoy for FREE!<br>
+        New events are frequently added. Locations vary as noted.</b>
+      </p>
+      <p style="margin-bottom: 22px;">
+        <b>And please enjoy our <a href="../onlineperformances.htm">free online performances</a>!</b>
+      </p>
+
+      <div class="review-item">
+        <h3>FREE NEW PERFORMERS CONCERT</h3>
+        <p><b>Oct. 18, 2026 at 3 PM</b> (see details <a href="#FREE_NEW_PERFORMERS_CONCERT_">above</a>)</p>
+      </div>
+
+      <div class="review-item">
+        <h3>FREE OPEN DRESS REHEARSAL WITH ORCHESTRA &ndash; MADAMA BUTTERFLY</h3>
+        <p style="color: var(--regina-red); font-weight: 700;">Nov. 5, 2026, at 7 PM</p>
+        <p>
+          Come get a FREE sneak peek at a dress rehearsal of our production of <i>Madama Butterfly</i>, fully staged with orchestra and English supertitles.<br>
+          No tickets needed &ndash; bring your family and friends and enjoy!
+        </p>
+      </div>
+    </section>
+
+    <!-- 4. PREVIOUS FREE PERFORMANCES THIS SEASON -->
+    <section class="regina-card">
+      <h2 class="section-title">PREVIOUS FREE PERFORMANCES THIS SEASON</h2>
+
+      <div id="raymour26" class="review-item">
+        <h3>FREE CONCERT</h3>
+        <p style="color: var(--regina-red); font-weight: 700;">Sept. 20, 2026, 2:30–4:30 PM</p>
+        <p>
+          <b>Raymour &amp; Flanigan Showroom</b><br>
+          Metro Mall, 66-26 Metropolitan Ave.,<br>
+          Middle Village, QUEENS
+        </p>
+        <p>
+          Enjoy two hours of great music with great Regina Opera performers, courtesy of Raymour &amp; Flanigan.<br>
+          Featuring soprano Rachel Hippert, mezzo-soprano Shanelle Woods, tenor José Heredia, lyric tenor Doohyun Yoon, and baritone Eliam Ramos.<br>
+          Metro Mall is across the street from the M train Metropolitan Ave. subway station.<br>
+          Free parking &ndash; use the RIGHT-HAND LOWER RAMP to access the parking lot.<br>
+          Showroom phone: <a href="tel:718-907-4687">(718) 907-4687</a>
+        </p>
+      </div>
+    </section>
 
 
+    </section>
 
-<!-- #BeginEditable "mainbody" -->
-
-<h1>REGINA OPERA’S 57th SEASON<br>
-2026-2027</h1>
-
-<p class="center largest"><b><a href="#Operas">Operas</a> – <a href="#Sunday">
-		Sunday Concerts</a> – <a href="#Outreach">
-		Free Performances</a></b></p>
-
-<hr>
-
-<h2><a name="Operas">OPERAS</a></h2>
-
-<p class="center bp larger"><b>All operas are performed in the original language with English supertitles.<br>
-<a href="info.htm">More information</a></b></p>
-
-<h2><a href="butterfly.htm">MADAMA BUTTERFLY</a></h2>
-<p class="auto-style2"><span class="auto-style4">Conducted by Scott Jackson 
-Wiley</span><br class="auto-style4">
-<span class="auto-style4">Directed by John Schenkel</span></p>
-<p class="auto-style3">Nov. 7, 8, 14 &amp; 15, 2026, at 3 PM</p>
-<p class="auto-style2"><span class="auto-style4">FREE open dress rehearsal with 
-orchestra</span><br class="auto-style4">
-<span class="auto-style4">Nov. 5, 2026, at 7 PM</span></p>
-<p class="auto-style3">At OLPH, 5902 6th Ave., Brooklyn</p>
-<p class="auto-style3">Tickets <a href="tickets.htm">online</a> or at the door</p>
-<p class="auto-style3"><a href="Butterfly%202026%20Program%20FINAL.pdf">Program 
-PDF</a></p>
-
-<hr>
-
-<h2><a name="Sunday">SUNDAY</a> AFTERNOON CONCERTS</h2>
-
-<p class="center">All Sunday Concerts are performed at OLPH, 5902 6th Avenue, 
-Brooklyn</p>
-<p class="center">&nbsp;</p>
-<p class="auto-style2"><span class="auto-style4">
-<a name="FREE_NEW_PERFORMERS_CONCERT_">FREE NEW PERFORMERS CONCERT</a></span><br class="auto-style4">
-<span class="auto-style4">Oct. 18, 2026, at 3 PM<br>
-<a href="OCTOBER%2018%202026%20program%20-%203%20pages.pdf">Program PDF</a></span></p>
-<p class="center">Make Fall festive with a FREE 2-hour Sunday Concert of 
-opera favorites and songs in several languages!</p>
-<p class="center">Featuring our NEW ARTISTS:<br>
-<br>
-Giovanna Yaqi Yang, soprano; Jihye Seo, soprano;<br>
-Hana Yiu, Mezzo-soprano; Ian Harris, tenor;<br>
-Michael Nim, tenor; and Anthony Larson, basso<br>
-<br>
-Returning on instrumentals are fan favorites Violetta Zabbi, piano, &amp; Richard 
-Paratley, flute.</p>
-
-<hr>
-
-<h2><a name="Outreach">FREE PERFORMANCES</a></h2>
-<p style="text-align: center"><b>Keep watching this space for performances you can enjoy for FREE!<br>
-New events are frequently added.
-Locations vary as noted.</b></p>
-<p style="text-align: center"><b>And please enjoy our <a href="onlineperformances.htm">free 
-online performances</a>!</b></p>
-
-<hr class="short">
-
-<p style="text-align: center"><b><span class="auto-style4">FREE NEW PERFORMERS CONCERT</span><br class="auto-style4">
-<span class="auto-style4">Oct. 18, 2026 at 3 PM (see details 
-<a href="#FREE_NEW_PERFORMERS_CONCERT_">above</a>)</span></b></p>
-
-<hr class="short">
-
-<p class="center"><b><span class="auto-style4">FREE OPEN DRESS REHEARSAL WITH ORCHESTRA -</span><br class="auto-style4">
-<span class="auto-style4">MADAMA BUTTERFLY</span><br class="auto-style4">
-<span class="auto-style4">Nov. 5, 2026, at 7 PM</span></b></p>
-<p class="center">Come get a FREE sneak peek at a dress rehearsal of our 
-production of <i>Madama Butterfly</i>,<br>
-fully staged with orchestra and English supertitles.<br>
-No tickets needed - bring your family and friends and enjoy!</p>
-
-<hr class="med">
-
-<h2>PREVIOUS FREE PERFORMANCES THIS SEASON</h2>
-
-<p class="larger center"><b><a name="raymour26">F</a>REE CONCERT<br>
-Sept. 20, 2026, 2:30-4:30 PM<br>
-Raymour &amp; Flanigan Showroom<br>
-Metro Mall,
-66-26 Metropolitan Ave.,<br>
-Middle Village, QUEENS</b></p>
-
-<p class="center">Enjoy two hours of great music with great Regina Opera 
-performers, courtesy of Raymour &amp; Flanigan.<br>
-Featuring soprano Rachel Hippert, mezzo-soprano Shanelle Woods, tenor José 
-Heredia, lyric tenor Doohyun Yoon, and baritone Eliam Ramos.<br>
-Metro Mall is across the street from the M train Metropolitan Ave. subway station.<br>
-Free parking - use the RIGHT-HAND LOWER RAMP to access the parking lot.<br>
-Showroom phone: (718) 907-4687</p>
-
-<p class="center larger">&nbsp;</p>
-
-
-<p class="center">&nbsp;</p>
-
-<table cellpadding="10" style="width: 75%;" cellspacing="5" border="2" summary="">
-  <tbody><tr>
-    <td>Regina Opera programs are supported, in part, by public funds from the
-	<a href="http://www.nyc.gov/html/dcla/html/home/home.shtml">New York City 
-	Department of Cultural Affairs</a>, in partnership with the City Council. We 
-	thank all our <a href="thankyou.htm">sponsors</a> for their 
-	generosity.<br>
-	<br>
-	<b>A copy of our latest annual report may be obtained by 
-<a href="contact.htm">contacting us</a>, or from the New York State Attorney General’s 
-<a href="https://www.charitiesnys.com/">Charities Bureau</a>, 120 Broadway, 3rd Floor, New York, New York 10271.</b>
-<br>
-	<br>
-	Regina Opera is a proud member of the <a href="http://www.ibrooklyn.com/">
-	Brooklyn Chamber of Commerce</a> and the
-	<a href="http://www.nyoperaalliance.org">New York Opera Alliance</a>.</td>
-  </tr>
-</tbody></table>
-
-
-<!-- #EndEditable -->
-
-
-
-
-
+  </main>
 
 </body>
+</html>
